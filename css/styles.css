@@ -156,11 +156,20 @@ nav.scrolled{
 .hero::before{
   content:"";
   position:absolute;
-  inset:0;
-
+  top:0;
+  bottom:0;
+  left:50%;
+  width:min(calc(100% - 3rem), calc(var(--container) - 3rem));
+  transform:translateX(-50%);
   background:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)),
-    url("../images/hero-live.jpg") center/cover no-repeat;
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,.95) 25%,
+      rgba(0,0,0,.72) 60%,
+      rgba(0,0,0,.8) 100%
+    ),
+    url("../images/lyrics awrf.jpg") center/cover no-repeat;
 
   z-index:-1;
 }
@@ -220,25 +229,13 @@ nav.scrolled{
 }
 
 .btn-secondary{
-  border:1px solid var(--border);
-  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.18);
   color:white;
 }
 
 .btn:hover{
   transform:translateY(-3px);
-}
-
-/* LYRIC TRANSITION */
-
-.lyric-transition{
-  height:80px;
-
-  background:
-    linear-gradient(to bottom, transparent, rgba(0,0,0,.85)),
-    url("../images/lyrics-texture.jpg") center/cover no-repeat;
-
-  opacity:.18;
 }
 
 /* SECTION */
