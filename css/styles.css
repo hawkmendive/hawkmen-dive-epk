@@ -159,7 +159,7 @@ nav.scrolled{
   top:0;
   bottom:0;
   left:50%;
-  width:min(calc(100% - 3rem), calc(var(--container) - 3rem));
+  width:min(calc(100% - 3rem), var(--container));
   transform:translateX(-50%);
   background:
     linear-gradient(
@@ -175,7 +175,7 @@ nav.scrolled{
 }
 
 .hero-content{
-  max-width:var(--container);
+  max-width:calc(var(--container) + 3rem);
   margin:0 auto;
   width:100%;
 
@@ -186,6 +186,7 @@ nav.scrolled{
   color:var(--accent);
   text-transform:uppercase;
   letter-spacing:.2em;
+  margin-left:1.5rem;
   margin-bottom:1rem;
 }
 
@@ -203,6 +204,7 @@ nav.scrolled{
 .hero-copy{
   max-width:720px;
   color:var(--muted);
+  margin-left:1.5rem;
   margin-bottom:2rem;
 }
 
@@ -212,6 +214,7 @@ nav.scrolled{
   display:flex;
   gap:.65rem;
   flex-wrap:wrap;
+  margin-left:1.5rem;
 }
 
 .btn{
@@ -458,6 +461,12 @@ footer{
   .hero-buttons{
     gap:.4rem;
     flex-wrap:nowrap;
+  }
+
+  .hero-kicker,
+  .hero-copy,
+  .hero-buttons{
+    margin-left:0;
   }
 
   .btn{
