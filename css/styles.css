@@ -201,14 +201,15 @@ nav.scrolled{
 
 .hero-buttons{
   display:flex;
-  gap:1rem;
+  gap:.65rem;
   flex-wrap:wrap;
 }
 
 .btn{
-  padding:1rem 1.4rem;
+  padding:.75rem 1.1rem;
   border-radius:999px;
   text-decoration:none;
+  font-size:.9rem;
   font-weight:600;
   transition:var(--transition);
 }
@@ -455,6 +456,17 @@ footer{
 
   section{
     padding:3rem 1.5rem;
+  }
+
+  .hero-buttons{
+    gap:.4rem;
+    flex-wrap:nowrap;
+  }
+
+  .btn{
+    padding:.6rem .75rem;
+    font-size:.78rem;
+    white-space:nowrap;
   }
 
   .nav-links{
